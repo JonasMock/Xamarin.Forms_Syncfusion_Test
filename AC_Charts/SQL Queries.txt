@@ -1,0 +1,24 @@
+﻿
+
+// Teilnehmer unf Event Filter
+SELECT `Teilnehmer`, `Event`, `Kompetenz_ges`, `Kompetenz`, `Bewertung`, `Beobachter` FROM `AC` WHERE `Teilnehmer` = "Jonas" AND `Event` = "Test1";
+
+// Summe Bewertungen in Event
+SELECT SUM(`Bewertung`) FROM `AC` WHERE `Teilnehmer` = "Jonas" AND `Event` = "KÜ"
+
+//Summe Bewertung nach Gesamt Kompetenz
+SELECT SUM(`Bewertung`) FROM `AC` WHERE `Teilnehmer` = "Jonas" AND `Kompetenz_ges` = "Sozialkompetenz"
+
+//Summe Fachkompetenz + Test
+SELECT SUM(`Bewertung`) + (Select SUM(`Bewertung`) FROM `AC` WHERE `Teilnehmer` = "Jonas" AND `Kompetenz_ges` = "Test") FROM `AC` WHERE `Teilnehmer` = "Jonas" AND `Kompetenz_ges` = "Fachkompetenz"
+
+//Summe Gesamt
+SELECT SUM(`Bewertung`) FROM `AC` WHERE `Teilnehmer` = "Jonas"
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  xmlns:local="clr-namespace:AC_Charts.ViewModel"  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms" x:Class="AC_Charts.Demo1">
+
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Filter" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Clicked="FilterButtonClicked" FontSize="Large"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.BindingContext>
+        <local:ViewModel_Filter/>
+    </ContentPage.BindingContext>
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="50" IsVisible="false" x:Name="FilterStack" >
+        <combobox:SfComboBox  TokensWrapMode="Wrap" TextSize="Small" HeightRequest="300"  IsSelectedItemsVisibleInDropDown="False" HorizontalOptions="Center" x:Name="filter_comboBox" DropDownItemHeight="50" DisplayMemberPath="FilterValue" MultiSelectMode="Token" DataSource="{Binding FilterCollection}"/>
+        <Button x:Name="applyFilter" Text="Save filter" FontSize="40"  HeightRequest="75" Clicked="ApplyFilterClicked" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+    </StackLayout> 
+
+
+</ContentPage>

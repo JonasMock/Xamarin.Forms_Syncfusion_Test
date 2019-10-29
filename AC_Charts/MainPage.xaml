@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="AC_Charts.MainPage" Title="Home">
+    <StackLayout Padding="30">
+        <Button Text="Test DB connection" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="AliceBlue" Clicked="dbTestButtonClicked" FontSize="Large"/>
+        <Button Text="Demo 1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="AliceBlue" Clicked="demo1ButtonClicked" FontSize="Large"/>
+        <Button Text="Demo 2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="AliceBlue" Clicked="demo2ButtonClicked" FontSize="Large"/>
+
+    </StackLayout>
+</ContentPage>
